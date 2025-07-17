@@ -1,0 +1,311 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuentes generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #000000;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+/* Cabecera */
+header {
+    background-color: #000000;
+    color: white;
+    padding: 10px 0;
+}
+
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+.navbar-brand .logo {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.menu li a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.menu li a:hover {
+    color: #ff6f61;
+}
+
+.menu li a.active {
+    color: #ff6f61;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+}
+
+
+main {
+    padding: 80px 0;
+}
+
+main .display-5 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+main .lead {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Tarjetas de servicios */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-service {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Para el tooltip */
+}
+
+.card-service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-service h4 {
+    color: #222;
+    font-weight: bold;
+    margin: 15px 0 10px;
+}
+
+.card-service p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.card-service .btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card-service .btn:hover {
+    background-color: #0056b3;
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Tooltip */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    z-index: 1000;
+}
+
+.card-service:hover .tooltip {
+    display: block;
+}
+
+/* Pie de página */
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 30px 0 15px;
+    margin-top: 40px;
+}
+
+footer .social-icons i {
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons i:hover {
+    color: #ff6f61;
+}
+/* Sección de Más Información */
+.more-info {
+    background-color: #000000;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffffff; 
+}
+
+.tab-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding: 5px 10px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-link.active {
+    color: #ff6f61;
+    border-bottom: 2px solid #ff6f61;
+}
+
+.tab-pane {
+    display: none;
+    padding: 10px;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-pane ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+/* Sección de Preguntas Frecuentes */
+.faq {
+    background-color: #000000;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.accordion {
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+details {
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+}
+
+details[open] {
+    border-bottom: none;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #000000; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+summary::-webkit-details-marker {
+    display: none; 
+}
+
+summary::after {
+    content: "▶"; 
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+details[open] summary::after {
+    content: "▼"; 
+}
+
+details > p {
+    padding: 10px 15px;
+    margin: 0;
+}
+/* Redes sociales */
+.social-footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}

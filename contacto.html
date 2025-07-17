@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="icon" href="img/1f05742c9addea17074493ff3a810297.jpg">
+
+  
+</head>
+<body>
+
+    <header class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+       
+            <a href="index.html" class="navbar-brand text-white">
+        <img src="img/1f05742c9addea17074493ff3a810297.jpg" alt="Logo" class="logo"> 
+         <span class="fs-4 fw-bold ms-2">Nocta</span>
+         <link rel="stylesheet" href="contacto.css">
+         <link rel="icon" href="img/1f05742c9addea17074493ff3a810297.jpg">
+</a>
+
+           
+            <nav class="menu">
+    <ul class="d-flex list-unstyled m-0">
+        <li><a href="index.html" class="active"><img src="img/home-svgrepo-com.svg" alt="Inicio"> Inicio</a></li>
+        <li><a href="servicios.html"><img src="img/contact-book-svgrepo-com (1).svg" alt="Servicios"> Servicios</a></li>
+        <li><a href="contacto.html"><img src="img/user-social-network-svgrepo-com (1).svg" alt="Contacto"> Contacto</a></li>
+    </ul>
+</nav>
+        </div>
+        <section class="contacto">
+  <div class="formulario">
+    <h2>Contáctanos</h2>
+    <form id="form-contacto" action="#" method="post">
+        
+
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <div class="checkbox">
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">¿Envío de newsletter?</label>
+      </div>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <button type="submit">Enviar</button>
+      
+    </form>
+  </div>
+  <div id="popup" class="popup">
+  <div class="popup-content">
+    <p>¡Gracias por contactarnos!</p>
+  </div>
+</div>
+
+
+  <div class="mapa">
+    <iframe
+      src="https://www.google.com/maps?q=Av.+Gral.+Eugenio+Garzón+1742&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+<section class="equipo-contacto">
+  <h2>Equipo de contacto</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Área</th>
+        <th>Correo</th>
+        <th>Celular</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>MARCO</td>
+        <td>Soporte</td>
+        <td>marco@misitio.com</td>
+        <td>949 654 343</td>
+      </tr>
+      <tr>
+        <td>MARCO</td>
+        <td>Desarrollo</td>
+        <td>marco@misitio.com</td>
+        <td>984 765 900</td>
+      </tr>
+      <tr>
+        <td>MARCO</td>
+        <td>Marketing</td>
+        <td>marco@misitio.com</td>
+        <td>994 095 654</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3 mt-5">
+        <div class="container">
+            <!-- Texto de copyright -->
+            <p class="mb-0">Copyright © Paginas Web Peruana 2025</p>
+            <p class="mb-0">Todos los Derechos Reservados</p>
+
+            <!-- Redes sociales -->
+        <div class="social-icons">
+                <a href="https:" target="_blank"><img src="img/instagram-svgrepo-com (4).svg"></a>
+                <a href="https://www.tiktok.com" target="_blank"><img src="img/tiktok-svgrepo-com (2).svg"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="img/youtube-svgrepo-com.svg"></a>
+            </div>
+        </div>
+    </footer>
+    </header>
+    <script>
+  document.getElementById('form-contacto').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+  
+    document.getElementById('popup').style.display = 'flex';
+
+  
+    this.reset();
+
+   
+    setTimeout(function() {
+      document.getElementById('popup').style.display = 'none';
+    }, 3000);
+  });
+</script>
+</body>
